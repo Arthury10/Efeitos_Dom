@@ -7,6 +7,7 @@ import initTooltip from '../../aula-8_anima-numeros/js/modules/tooltip.js'
 import initDropdownMenu from '../../aula-8_anima-numeros/js/modules/dropdown-menu.js'
 import initMenuMobile from '../../aula-8_anima-numeros/js/modules/menu-mobile.js'
 import initAnimaNumeros from '../../aula-8_anima-numeros/js/modules/anima-numeros.js'
+import initFuncionamento from './modules/funcionamento.js'
 
 initScrollSuave()
 initAnimacaoScroll()
@@ -17,3 +18,4 @@ initTooltip()
 initDropdownMenu()
 initMenuMobile()
 initAnimaNumeros()
+initFuncionamento()
