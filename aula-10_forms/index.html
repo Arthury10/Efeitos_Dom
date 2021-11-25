@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Forms</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Playfair+Display+SC"
+			rel="stylesheet"
+		/>
+	</head>
+	<style>
+		label {
+			display: block;
+			margin-top: 1rem;
+			margin-bottom: 0.5px;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+		}
+		form {
+			max-width: 400px;
+			margin: 0 auto;
+		}
+		input,
+		textarea {
+			width: 100%;
+			box-sizing: border-box;
+			padding: 0.5rem;
+			border: 2px solid #000000;
+			font-size: 1rem;
+			margin-bottom: 0.5rem;
+		}
+
+		textarea {
+			max-height: 150px;
+		}
+
+		.invalido {
+			border-color: red;
+		}
+	</style>
+	<body>
+		<form name="contato" id="contato">
+			<label for="nome">Nome:</label>
+			<input type="text" name="nome" id="nome" required />
+			<span class="erro"></span>
+			<label for="email">Email:</label>
+			<input type="text" name="email" id="email" required />
+			<span class="erro"></span>
+			<label for="textarea">Mensagem:</label>
+			<textarea name="textarea" id="textarea"></textarea>
+		</form>
+		<span class="texto"></span>
+
+		<script>
+			const contato = document.querySelector('#contato')
+			const dados = {}
+			function handleChange(event) {
+				dados[event.target.name] = event.target.value
+			}
+			contato.addEventListener('change', handleChange)
+		</script>
+	</body>
+</html>
